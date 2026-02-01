@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfólio | Lucas Selau</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="site-container">
+
+    <header class="header">
+        <div class="perfil">
+            <div class="clima-hora" id="climaHora">
+        🌡️ Carregando clima...<br>
+        🕒 Carregando hora...
+    </div>
+            <div class="perfil-img-container">
+                <img src="img/perfil.jpeg" alt="Foto de Lucas Selau" class="perfil-img">
+            </div>
+            <h1>Lucas Selau</h1>
+        </div>
+
+        <nav class="menu">
+            <a href="#sobre">Sobre</a>
+            <a href="#formacao">Formação</a>
+            <a href="#habilidades">Habilidades</a>
+            <a href="#idiomas">Idiomas</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#certificados">Certificados</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <!-- Botão Dark/Light Mode -->
+    <button id="themeToggle">🌙</button>
+
+    <main>
+        <!-- Sobre -->
+        <section id="sobre" class="section fade-in">
+            <h2>Sobre mim</h2>
+            <span class="section-line"></span>
+            <p class="texto">
+                <span id="typed-text"></span><span class="cursor">|</span>
+            </p>
+        </section>
+
+        <!-- Formação -->
+        <section id="formacao" class="section fade-in">
+            <h2>Formação Acadêmica</h2>
+            <span class="section-line"></span>
+            <ul class="lista">
+                <li>Ensino Médio Completo — Pio Lanteri</li>
+                <li>Análise e Desenvolvimento de Software — UNICESUMAR (em andamento)</li>
+            </ul>
+        </section>
+
+        <!-- Habilidades -->
+        <section id="habilidades" class="section fade-in">
+            <h2>Habilidades</h2>
+            <span class="section-line"></span>
+            <div class="grid">
+                <div class="card">Java (POO)</div>
+                <div class="card">C / C++</div>
+                <div class="card">HTML, CSS e JavaScript</div>
+                <div class="card">Banco de Dados (SQL)</div>
+                <div class="card">Testes de Software</div>
+            </div>
+        </section>
+
+        <!-- Idiomas -->
+        <section id="idiomas" class="section fade-in">
+            <h2>Idiomas</h2>
+            <span class="section-line"></span>
+            <div class="grid">
+                <!-- Português -->
+                <div class="card idioma" title="Nativo">
+                    <img src="img/brasil.jpg" alt="Português">
+                    <h3>Português</h3>
+                    <p><strong>Nativo</strong></p>
+                </div>
+
+                <!-- Inglês -->
+                <div class="card idioma" title="Avançado">
+                    <img src="img/eua.jpg" alt="Inglês">
+                    <h3>Inglês</h3>
+                    <p><strong>Avançado</strong></p>
+                    <p class="idioma-resumo">
+                        Escrita: Excelente<br>
+                        Leitura: Excelente<br>
+                        Conversação: Boa<br>
+                        Compreensão auditiva: Excelente
+                    </p>
+
+                    <!-- Áudio de apresentação -->
+                    <div class="audio-container">
+                        <audio controls>
+                            <source src="audio/apresentacao-ingles.mp3" type="audio/mpeg">
+                            Seu navegador não suporta o elemento de áudio.
+                        </audio>
+                    </div>
+                </div>
+
+                <!-- Italiano -->
+                <div class="card idioma" title="Básico">
+                    <img src="img/italia.jpg" alt="Italiano">
+                    <h3>Italiano</h3>
+                    <p><strong>Básico</strong></p>
+                    <p class="idioma-resumo">
+                        Escrita: Básica<br>
+                        Leitura: Básica<br>
+                        Conversação: Iniciante<br>
+                        Compreensão auditiva: Básica
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projetos -->
+        <section id="projetos" class="section fade-in">
+            <h2>Projetos</h2>
+            <span class="section-line"></span>
+            <div class="grid">
+                <div class="card projeto-card">
+                    <h3>Agenda Telefônica (Java)</h3>
+                    <p>Projeto para aplicação de conceitos de POO.</p>
+                    <a class="btn github-link" href="https://github.com/Lucasselau-dev/Agenda-telefonica-TESTE-CLASSE-E-OBJETO-" target="_blank">
+                        <i class="fab fa-github"></i> Ver no GitHub
+                    </a>
+                </div>
+                <div class="card projeto-card">
+                    <h3>Sistema Bancário</h3>
+                    <p>Aplicação com banco de dados e testes de qualidade.</p>
+                    <a class="btn github-link" href="https://github.com/seu-usuario/sistema-bancario" target="_blank">
+                        <i class="fab fa-github"></i> Ver no GitHub
+                    </a>
+                </div>
+                <div class="card projeto-card">
+                    <h3>Site de Notícias</h3>
+                    <p>Projeto web com HTML, CSS e banco de dados.</p>
+                    <a class="btn github-link" href="https://github.com/Lucasselau-dev/Site-de-noticia" target="_blank">
+                        <i class="fab fa-github"></i> Ver no GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certificados -->
+        <section id="certificados" class="section fade-in">
+            <h2>Certificados</h2>
+            <span class="section-line"></span>
+            <div class="grid">
+                <div class="cert-card">
+                    <button class="cert-btn" data-img="img/ts.png" data-resumo="Curso de <b>Testes de Software</b>: técnicas de <b>teste manual</b>, <b>automação</b> e <b>qualidade</b>.">Teste de Software</button>
+                    <p class="resumo"></p>
+                </div>
+                <div class="cert-card">
+                    <button class="cert-btn" data-img="img/ad.png" data-resumo="Curso de <b>Banco de Dados</b> & <b>Power BI</b>: SQL, dashboards e análise de <b>dados</b>.">Banco de Dados & Power BI</button>
+                    <p class="resumo"></p>
+                </div>
+                <div class="cert-card">
+                    <button class="cert-btn" data-img="img/adm21.png" data-resumo="Curso de <b>Gestão de Projetos</b>: metodologias <b>ágeis</b>, planejamento e execução.">Gestão de Projetos</button>
+                    <p class="resumo"></p>
+                </div>
+            </div>
+        </section>
+        <section id="contato" class="section fade-in">
+            <h2>Contato</h2>
+            <span class="section-line"></span>
+            <div class="contato-grid">
+                <a href="mailto:lucasmkselau@gmail.com" class="contato-card">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h3>Email</h3>
+                        <p>lucasmkselau@gmail.com</p>
+                    </div>
+                </a>
+                <a href="https://www.linkedin.com/in/lucas-selau-ads/" target="_blank" class="contato-card">
+                    <i class="fab fa-linkedin"></i>
+                    <div>
+                        <h3>LinkedIn</h3>
+                        <p>linkedin.com/in/lucas-selau-ads</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 — Lucas Selau</p>
+    </footer>
+</div>
+
+<!-- MODAL DE CERTIFICADOS -->
+<div id="modal-certificado" class="modal">
+    <span class="fechar">&times;</span>
+    <img id="img-modal">
+</div>
+
+<!-- BOTÃO VOLTAR AO TOPO -->
+<button id="topBtn" title="Voltar ao topo">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>
