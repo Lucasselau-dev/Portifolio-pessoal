@@ -24,9 +24,9 @@ body.dark-mode {
 .site-container {
     max-width: 1200px;
     margin: auto;
-    background: #ffffff;
+    background: #e0e0e0;
     border-radius: 16px;
-    border: 1px solid #e5e7eb;
+    border: 1px solid #d7d7d896;
     box-shadow: 0 20px 40px rgba(0,0,0,0.05);
     overflow: hidden;
     padding-bottom: 40px;
@@ -42,8 +42,8 @@ body.dark-mode .site-container {
 .header {
     position: relative;
     padding: 80px 20px 60px; /* MAIS ALTO */
-    background: #ececec;
-    color: #1f2937;
+    background: #a5a4a4;
+    color: rgb(37, 46, 63);
     border-radius: 16px 16px 0 0;
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     transition: background 0.5s, color 0.5s;
