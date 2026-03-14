@@ -4,53 +4,52 @@
     <meta charset="UTF-8">
     <title>Portfólio | Lucas Selau</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
-
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="site-container">
 
+    <!-- ── HEADER ─────────────────────────────── -->
     <header class="header">
+
+        <div class="clima-hora" id="climaHora">
+            <span class="clima-temp">—</span>
+            <span class="clima-desc">Carregando...</span>
+            <span class="clima-time" id="relogio">--:--</span>
+        </div>
+
+        <button id="themeToggle" title="Alternar tema">🌙</button>
+
         <div class="perfil">
-            <div class="clima-hora" id="climaHora">
-                🌡️ Carregando clima...<br>
-                🕒 Carregando hora...
+            <div class="perfil-img-wrap">
+                <img src="img/perfil.jpeg" alt="Lucas Selau" class="perfil-img">
             </div>
-
-            <div class="perfil-img-container">
-                <img src="img/perfil.jpeg" alt="Foto de Lucas Selau" class="perfil-img">
-            </div>
-
-            <h1>Lucas Selau - Fullstack Jr.</h1>
+            <h1 class="perfil-nome">Lucas Selau</h1>
+            <p class="perfil-role">Desenvolvedor Fullstack Jr.</p>
         </div>
 
         <nav class="menu">
             <a href="#sobre">Sobre</a>
             <a href="#formacao">Formação</a>
-            <a href="#habilidades">Habilidades</a>
             <a href="#idiomas">Idiomas</a>
-            <a href="#projetos">Projetos</a>
+            <a href="#projetos">Habilidades & Projetos</a>
             <a href="#certificados">Certificados</a>
             <a href="#contato">Contato</a>
         </nav>
+
     </header>
 
-    <button id="themeToggle">🌙</button>
-
+    <!-- ── MAIN ───────────────────────────────── -->
     <main>
 
         <!-- SOBRE -->
         <section id="sobre" class="section fade-in">
             <h2>Sobre mim</h2>
             <span class="section-line"></span>
-            <p class="texto">
+            <p class="texto sobre-texto">
                 <span id="typed-text"></span><span class="cursor">|</span>
             </p>
         </section>
@@ -59,23 +58,15 @@
         <section id="formacao" class="section fade-in">
             <h2>Formação Acadêmica</h2>
             <span class="section-line"></span>
-            <ul class="lista">
-                <li>Análise e Desenvolvimento de Software — UNICESUMAR (em andamento)</li>
-                <li>Ensino Médio Completo — Pio Lanteri</li>
-            </ul>
-        </section>
-
-        <!-- HABILIDADES -->
-        <section id="habilidades" class="section fade-in">
-            <h2>Habilidades</h2>
-            <span class="section-line"></span>
-            <div class="grid">
-                <div class="card">Java</div>
-                <div class="card">C / C++</div>
-                <div class="card">Python</div>
-                <div class="card">HTML, CSS e JavaScript</div>
-                <div class="card">Banco de Dados (SQL)</div>
-                <div class="card">Teste de qualidade de software</div>
+            <div class="formacao-lista">
+                <div class="formacao-item">
+                    <div class="formacao-icone"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="formacao-info">
+                        <strong>Análise e Desenvolvimento de Software</strong>
+                        <span>UNICESUMAR</span>
+                        <span class="badge-curso">Em andamento</span>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -88,21 +79,27 @@
                 <div class="card idioma">
                     <img src="img/brasil.jpg" alt="Português">
                     <h3>Português</h3>
-                    <p><strong>Nativo</strong></p>
+                    <span class="nivel-badge nivel-nativo">Nativo</span>
+                    <ul class="idioma-lista">
+                        <li><span>Escrita</span><span>Excelente</span></li>
+                        <li><span>Leitura</span><span>Excelente</span></li>
+                        <li><span>Conversação</span><span>Excelente</span></li>
+                        <li><span>Compreensão</span><span>Excelente</span></li>
+                    </ul>
                 </div>
 
-                <div class="card idioma">
+                <div class="card idioma idioma-destaque">
                     <img src="img/eua.jpg" alt="Inglês">
                     <h3>Inglês</h3>
-                    <p><strong>Avançado</strong></p>
-                    <p class="idioma-resumo">
-                        Escrita: Excelente<br>
-                        Leitura: Excelente<br>
-                        Conversação: Boa<br>
-                        Compreensão auditiva: Excelente
-                    </p>
-
+                    <span class="nivel-badge nivel-avancado">Avançado</span>
+                    <ul class="idioma-lista">
+                        <li><span>Escrita</span><span>Excelente</span></li>
+                        <li><span>Leitura</span><span>Excelente</span></li>
+                        <li><span>Conversação</span><span>Boa</span></li>
+                        <li><span>Compreensão</span><span>Excelente</span></li>
+                    </ul>
                     <div class="audio-container">
+                        <p class="audio-label"><i class="fas fa-microphone-alt"></i> Apresentação em inglês</p>
                         <audio controls>
                             <source src="audio/apresentacao-ingles.mp3" type="audio/mpeg">
                         </audio>
@@ -112,94 +109,163 @@
                 <div class="card idioma">
                     <img src="img/italia.jpg" alt="Italiano">
                     <h3>Italiano</h3>
-                    <p><strong>Básico</strong></p>
-                    <p class="idioma-resumo">
-                        Escrita: Básica<br>
-                        Leitura: Básica<br>
-                        Conversação: Iniciante<br>
-                        Compreensão auditiva: Básica
-                    </p>
+                    <span class="nivel-badge nivel-basico">Básico</span>
+                    <ul class="idioma-lista">
+                        <li><span>Escrita</span><span>Básica</span></li>
+                        <li><span>Leitura</span><span>Básica</span></li>
+                        <li><span>Conversação</span><span>Iniciante</span></li>
+                        <li><span>Compreensão</span><span>Básica</span></li>
+                    </ul>
                 </div>
 
             </div>
         </section>
 
-        <!-- PROJETOS -->
-        <!-- PROJETOS -->
-<section id="projetos" class="section fade-in">
-    <h2>Projetos</h2>
-    <span class="section-line"></span>
+        <!-- HABILIDADES & PROJETOS -->
+        <section id="projetos" class="section fade-in">
+            <h2>Habilidades & Projetos</h2>
+            <span class="section-line"></span>
 
-    <div class="grid">
+            <div class="skills-strip">
+                <div class="skill-pill"><i class="fab fa-java"></i><span>Java</span></div>
+                <div class="skill-pill"><i class="fas fa-code"></i><span>C / C++</span></div>
+                <div class="skill-pill"><i class="fab fa-python"></i><span>Python</span></div>
+                <div class="skill-pill"><i class="fab fa-html5"></i><span>HTML · CSS · JS</span></div>
+                <div class="skill-pill"><i class="fas fa-database"></i><span>SQL</span></div>
+                <div class="skill-pill"><i class="fas fa-vial"></i><span>QA / Testes</span></div>
+                <div class="skill-pill"><i class="fab fa-react"></i><span>React</span></div>
+            </div>
 
-        <div class="card projeto-card">
-            <h3>Calculadora de Juros</h3>
-            <p>Projeto para cálculo de juros.</p>
-            <a class="btn github-link"
-               href="https://github.com/Lucasselau-dev/calculadora.juros"
-               target="_blank">
-                <i class="fab fa-github"></i> Ver no GitHub
-            </a>
-        </div>
+            <div class="proj-divider"><span>Projetos</span></div>
 
-        <div class="card projeto-card">
-            <h3>Sistema Bancário</h3>
-            <p>Aplicação com banco de dados e testes de qualidade.</p>
-            <a class="btn github-link"
-               href="https://github.com/seu-usuario/sistema-bancario"
-               target="_blank">
-                <i class="fab fa-github"></i> Ver no GitHub
-            </a>
-        </div>
+            <div class="grid proj-grid">
 
-        <div class="card projeto-card">
-            <h3>Site de Notícias</h3>
-            <p>Projeto web com HTML, CSS e banco de dados.</p>
-            <a class="btn github-link"
-               href="https://github.com/Lucasselau-dev/Site-de-noticia"
-               target="_blank">
-                <i class="fab fa-github"></i> Ver no GitHub
-            </a>
-        </div>
+                <!-- 01 -->
+                <div class="card projeto-card">
+                    <div class="proj-topo">
+                        <i class="fas fa-calculator proj-icone"></i>
+                        <span class="proj-num">01</span>
+                    </div>
+                    <h3>Calculadora de Juros</h3>
+                    <p>Cálculo de juros simples e compostos com interface para o usuário final.</p>
+                    <div class="proj-langs">
+                        <span class="lang-icon-tag"><i class="fab fa-java"></i> Java</span>
+                    </div>
+                    <a class="btn github-link" href="https://github.com/Lucasselau-dev/calculadora.juros" target="_blank">
+                        <i class="fab fa-github"></i> Ver no GitHub
+                    </a>
+                </div>
 
-    </div>
-</section>
+                <!-- 02 -->
+                <div class="card projeto-card">
+                    <div class="proj-topo">
+                        <i class="fas fa-landmark proj-icone"></i>
+                        <span class="proj-num">02</span>
+                    </div>
+                    <h3>Sistema Bancário</h3>
+                    <p>Aplicação com banco de dados, operações CRUD e testes de qualidade.</p>
+                    <div class="proj-langs">
+                        <span class="lang-icon-tag"><i class="fab fa-java"></i> Java</span>
+                        <span class="lang-icon-tag"><i class="fas fa-database"></i> SQL</span>
+                        <span class="lang-icon-tag"><i class="fab fa-react"></i> React</span>
+                        <span class="lang-icon-tag"><i class="fas fa-vial"></i> QA</span>
+                        <span class="lang-icon-tag"><i class="fab fa-html5"></i> HTML</span>
+                        <span class="lang-icon-tag"><i class="fab fa-css3-alt"></i> CSS</span>
+                    </div>
+                    <a class="btn github-link" href="https://github.com/Lucasselau-dev/sistema-bancario" target="_blank">
+                        <i class="fab fa-github"></i> Ver no GitHub
+                    </a>
+                </div>
 
-        <!-- CERTIFICADOS (CORRIGIDO) -->
+                <!-- 03 -->
+                <div class="card projeto-card">
+                    <div class="proj-topo">
+                        <i class="fas fa-newspaper proj-icone"></i>
+                        <span class="proj-num">03</span>
+                    </div>
+                    <h3>Site de Notícias</h3>
+                    <p>Projeto web com HTML, CSS e banco de dados para exibição de notícias.</p>
+                    <div class="proj-langs">
+                        <span class="lang-icon-tag"><i class="fab fa-html5"></i> HTML</span>
+                        <span class="lang-icon-tag"><i class="fab fa-css3-alt"></i> CSS</span>
+                        <span class="lang-icon-tag"><i class="fab fa-js"></i> JS</span>
+                        <span class="lang-icon-tag"><i class="fas fa-database"></i> SQL</span>
+                    </div>
+                    <a class="btn github-link" href="https://github.com/Lucasselau-dev/Site-de-noticia" target="_blank">
+                        <i class="fab fa-github"></i> Ver no GitHub
+                    </a>
+                </div>
+
+                <!-- 04 — Em progresso -->
+                <div class="card projeto-card projeto-progresso">
+                    <div class="proj-topo">
+                        <i class="fas fa-robot proj-icone"></i>
+                        <span class="badge-progresso"><i class="fas fa-spinner fa-spin"></i> Em progresso</span>
+                    </div>
+                    <h3>Automação de Testes Web</h3>
+                    <p>Script de automação de testes de interface com Selenium e Python, cobrindo fluxos críticos de um sistema web.</p>
+                    <div class="proj-langs">
+                        <span class="lang-icon-tag"><i class="fab fa-python"></i> Python</span>
+                        <span class="lang-icon-tag"><i class="fas fa-vial"></i> Selenium</span>
+                        <span class="lang-icon-tag"><i class="fas fa-vial"></i> QA</span>
+                    </div>
+                    <span class="btn btn-disabled">
+                        <i class="fas fa-lock"></i> Em desenvolvimento
+                    </span>
+                </div>
+
+                <!-- 05 — Em progresso -->
+                <div class="card projeto-card projeto-progresso">
+                    <div class="proj-topo">
+                        <i class="fas fa-plug proj-icone"></i>
+                        <span class="badge-progresso"><i class="fas fa-spinner fa-spin"></i> Em progresso</span>
+                    </div>
+                    <h3>Testes de API REST</h3>
+                    <p>Plano e execução de testes manuais e automatizados em APIs REST, validando status codes, contratos e fluxos de erro.</p>
+                    <div class="proj-langs">
+                        <span class="lang-icon-tag"><i class="fas fa-vial"></i> Postman</span>
+                        <span class="lang-icon-tag"><i class="fab fa-python"></i> Python</span>
+                        <span class="lang-icon-tag"><i class="fas fa-vial"></i> QA</span>
+                    </div>
+                    <span class="btn btn-disabled">
+                        <i class="fas fa-lock"></i> Em desenvolvimento
+                    </span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CERTIFICADOS -->
         <section id="certificados" class="section fade-in">
             <h2>Certificados</h2>
             <span class="section-line"></span>
-
             <div class="grid">
 
                 <div class="cert-card">
+                    <div class="cert-icone"><i class="fas fa-vial"></i></div>
+                    <h3>Teste de Software</h3>
+                    <p class="resumo">Técnicas de <b>teste manual</b>, <b>automação</b> e <b>qualidade</b>.</p>
                     <button class="cert-btn" data-img="img/ts.png">
-                        Teste de Software
+                        <i class="fas fa-eye"></i> Ver Certificado
                     </button>
-                    <p class="resumo">
-                        Curso de <b>Testes de Software</b>, abordando técnicas de
-                        <b>teste manual</b>, <b>automação</b> e <b>qualidade</b>.
-                    </p>
                 </div>
 
                 <div class="cert-card">
+                    <div class="cert-icone"><i class="fas fa-chart-bar"></i></div>
+                    <h3>Power BI & Banco de Dados</h3>
+                    <p class="resumo">Foco em <b>SQL</b>, dashboards e análise de <b>dados</b>.</p>
                     <button class="cert-btn" data-img="img/ad.png">
-                        Análise de Banco de Dados no Power BI
+                        <i class="fas fa-eye"></i> Ver Certificado
                     </button>
-                    <p class="resumo">
-                        Curso de <b>Banco de Dados</b> e <b>Power BI</b>, com foco em
-                        <b>SQL</b>, dashboards e análise de <b>dados</b>.
-                    </p>
                 </div>
 
                 <div class="cert-card">
+                    <div class="cert-icone"><i class="fas fa-briefcase"></i></div>
+                    <h3>Administração no Século XXI</h3>
+                    <p class="resumo">Planejamento, organização e <b>visão estratégica</b>.</p>
                     <button class="cert-btn" data-img="img/adm21.png">
-                        Administração no Século XXI
+                        <i class="fas fa-eye"></i> Ver Certificado
                     </button>
-                    <p class="resumo">
-                        Curso de <b>Gestão</b> e <b>Administração</b>, abordando
-                        planejamento, organização e visão estratégica.
-                    </p>
                 </div>
 
             </div>
@@ -209,8 +275,8 @@
         <section id="contato" class="section fade-in">
             <h2>Contato</h2>
             <span class="section-line"></span>
-
             <div class="contato-grid">
+
                 <a href="mailto:lucasmkselau@gmail.com" class="contato-card">
                     <i class="fas fa-envelope"></i>
                     <div>
@@ -223,16 +289,25 @@
                     <i class="fab fa-linkedin"></i>
                     <div>
                         <h3>LinkedIn</h3>
-                        <p>linkedin.com/in/lucas-selau-ads</p>
+                        <p>lucas-selau-ads</p>
                     </div>
                 </a>
+
+                <a href="https://github.com/Lucasselau-dev" target="_blank" class="contato-card">
+                    <i class="fab fa-github"></i>
+                    <div>
+                        <h3>GitHub</h3>
+                        <p>Lucasselau-dev</p>
+                    </div>
+                </a>
+
             </div>
         </section>
 
     </main>
 
     <footer class="footer">
-        <p>© 2026 — Lucas Selau</p>
+        <p>© 2026 — Lucas Selau · Curitiba, PR</p>
     </footer>
 
 </div>
@@ -240,10 +315,10 @@
 <!-- MODAL -->
 <div id="modal-certificado" class="modal">
     <span class="fechar">&times;</span>
-    <img id="img-modal">
+    <img id="img-modal" alt="Certificado">
 </div>
 
-<button id="topBtn">↑</button>
+<button id="topBtn" title="Voltar ao topo">↑</button>
 
 <script src="script.js"></script>
 </body>
